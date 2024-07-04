@@ -32,7 +32,7 @@ export default function Login(props) {
               }
             })
             .catch((err)=>{
-              console.log("error in login form");
+              console.log("error in login form"+err);
             })
         
         }
