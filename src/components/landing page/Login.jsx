@@ -14,7 +14,7 @@ export default function Login(props) {
         e.preventDefault()
         try{
 
-            axios.post(`${process.env.REACT_APP_BACKEND_URL}/loginform`,{
+            axios.post(`/loginform`,{
               username : user,
               password: pass,
               adminid : adminid 

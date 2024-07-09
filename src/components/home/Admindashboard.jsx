@@ -13,7 +13,7 @@ export default function Admindashboard() {
     let [pendingrequests,setPendingRequests] = useState([])
 try {
     useEffect(()=>{
-      axios.get(`${process.env.REACT_APP_BACKEND_URL}/home/dashboard/admin/sendappointmentstoadmin`)
+      axios.get(`/home/dashboard/admin/sendappointmentstoadmin`)
       .then((response)=>{
         setPendingRequests(response.data)
       })
@@ -59,7 +59,7 @@ try {
           <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 w-44 ml-auto mr-24 rounded"
           onClick={()=>{
             try {
-              axios.post(`http://localhost:8000/home/dashboard/admin/acceptappointment`,{
+              axios.post(`/home/dashboard/admin/acceptappointment`,{
                 appointmentid : appointment.Appointmentid,
                 username : appointment.user
               }).then((responsee)=>{

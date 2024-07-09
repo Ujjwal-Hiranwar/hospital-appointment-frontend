@@ -24,7 +24,7 @@ export default function Dashboard() {
   
   try {
     useEffect(()=>{
-      axios.post(`${process.env.REACT_APP_BACKEND_URL}/home/dashboard/logindata`,{
+      axios.post(`/home/dashboard/logindata`,{
         key: username
       })
       .then(response=>{
@@ -94,7 +94,7 @@ export default function Dashboard() {
       <button
         onClick={()=>{
           try{
-            axios.post(`http://localhost:8000/home/dashboard/cancelappointment`,{
+            axios.post(`/home/dashboard/cancelappointment`,{
               appointmentid : appointment.Appointmentid,
               username  : userdata.username
             }).then((response)=>{

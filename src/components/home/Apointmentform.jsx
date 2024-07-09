@@ -25,7 +25,7 @@ export default function Appointmentform() {
       e.preventDefault()
       
       try {
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/home/dashboard/appointment`,userAppointmentData)
+        axios.post(`/home/dashboard/appointment`,userAppointmentData)
         .then((response)=>{
           console.log(response.data);
         })

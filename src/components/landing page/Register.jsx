@@ -23,7 +23,7 @@ export default function Register() {
       e.preventDefault();
       try {
         axios
-       .post(`${process.env.REACT_APP_BACKEND_URL}/registerform`,formData)
+       .post(`/registerform`,formData)
        .then((res)=>{
         console.log("Your data is sent successfully");
        

@@ -17,7 +17,7 @@ export default function Doctorform() {
     const handleSubmit = (e) => {
         e.preventDefault();
         try {
-            axios.post(`${process.env.REACT_APP_BACKEND_URL}/home/dashboard/admin/senddoctordata`,formData)
+            axios.post(`/home/dashboard/admin/senddoctordata`,formData)
         } catch (error) {
             
         }
