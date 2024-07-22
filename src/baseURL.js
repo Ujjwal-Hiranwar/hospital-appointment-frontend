@@ -1,0 +1,1 @@
+export const BASE_URL="https://appointment-management-1.onrender.com"

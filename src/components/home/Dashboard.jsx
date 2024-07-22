@@ -6,7 +6,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import Appointmentcard from './Appointmentcard'
 import Appointmentform from './Apointmentform'
-
+import {BASE_URL} from '../../baseURL'
 
 
 export default function Dashboard() {
@@ -24,7 +24,7 @@ export default function Dashboard() {
   
   try {
     useEffect(()=>{
-      axios.post(`/home/dashboard/logindata`,{
+      axios.post(`${BASE_URL}/home/dashboard/logindata`,{
         key: username
       })
       .then(response=>{
@@ -94,7 +94,7 @@ export default function Dashboard() {
       <button
         onClick={()=>{
           try{
-            axios.post(`/home/dashboard/cancelappointment`,{
+            axios.post(`${BASE_URL}/home/dashboard/cancelappointment`,{
               appointmentid : appointment.Appointmentid,
               username  : userdata.username
             }).then((response)=>{

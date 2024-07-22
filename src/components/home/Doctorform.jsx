@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import {BASE_URL} from '../../baseURL'
 
 export default function Doctorform() {
     const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ export default function Doctorform() {
     const handleSubmit = (e) => {
         e.preventDefault();
         try {
-            axios.post(`/home/dashboard/admin/senddoctordata`,formData)
+            axios.post(`${BASE_URL}/home/dashboard/admin/senddoctordata`,formData)
         } catch (error) {
             
         }

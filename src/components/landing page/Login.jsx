@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import Navigation from './Navigation'
-
+import {BASE_URL} from '../../baseURL'
 
 export default function Login(props) {
  
@@ -10,11 +10,12 @@ export default function Login(props) {
     let [adminid,setAdminID] = useState('')
     let [user,setuser] = useState('')
     let [pass,setpass] = useState('')
+    console.log(`the base url is ${BASE_URL}`)
     const handleclick =async (e)=>{
         e.preventDefault()
         try{
 
-            axios.post(`/loginform`,{
+            axios.post(`${BASE_URL}/loginform`,{
               username : user,
               password: pass,
               adminid : adminid 

@@ -2,7 +2,7 @@ import React from 'react'
 import axios from "axios"
 import { useState } from 'react'
 import Navigation from './Navigation';
-
+import {BASE_URL} from '../../baseURL'
 export default function Register() {
   
   const [formData,setFormData] = useState({
@@ -23,7 +23,7 @@ export default function Register() {
       e.preventDefault();
       try {
         axios
-       .post(`/registerform`,formData)
+       .post(`${BASE_URL}/registerform`,formData)
        .then((res)=>{
         console.log("Your data is sent successfully");
        

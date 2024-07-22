@@ -5,6 +5,7 @@ import axios from 'axios'
 import Appointmentcard from './Appointmentcard'
 import Doctorform from './Doctorform'
 import Doctorcard from './Doctorcard'
+import {BASE_URL} from '../../baseURL'
 
 export default function Admindashboard() {
     let [viewappointment, setViewAppointment] = useState(false)
@@ -13,7 +14,7 @@ export default function Admindashboard() {
     let [pendingrequests,setPendingRequests] = useState([])
 try {
     useEffect(()=>{
-      axios.get(`/home/dashboard/admin/sendappointmentstoadmin`)
+      axios.get(`${BASE_URL}/home/dashboard/admin/sendappointmentstoadmin`)
       .then((response)=>{
         setPendingRequests(response.data)
       })
@@ -59,7 +60,7 @@ try {
           <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 w-44 ml-auto mr-24 rounded"
           onClick={()=>{
             try {
-              axios.post(`/home/dashboard/admin/acceptappointment`,{
+              axios.post(`${BASE_URL}/home/dashboard/admin/acceptappointment`,{
                 appointmentid : appointment.Appointmentid,
                 username : appointment.user
               }).then((responsee)=>{
