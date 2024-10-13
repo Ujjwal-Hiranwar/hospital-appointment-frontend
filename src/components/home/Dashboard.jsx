@@ -112,7 +112,7 @@ export default function Dashboard() {
           }
             
          }}
-        className="bg-red-500 hover:bg-red-600 text-white mr-24 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className="bg hover:bg-stone-600 text-white mr-24 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       >
         Cancel Appointment
       </button>

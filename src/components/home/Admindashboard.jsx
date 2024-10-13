@@ -57,7 +57,7 @@ try {
         
         key={index}
           />
-          <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 w-44 ml-auto mr-24 rounded"
+          <button className="bg hover:bg-stone-600 text-white font-bold py-2 px-4 w-44 ml-auto mr-24 rounded"
           onClick={()=>{
             try {
               axios.post(`${BASE_URL}/home/dashboard/admin/acceptappointment`,{

@@ -9,7 +9,7 @@ export default function Sidebar(props) {
       
         <div className="flex flex-col h-screen">
           {/* Sidebar component */}
-          <div className="bg-gray-800 p-4 w-72">
+          <div className="bg-black p-4 w-72">
             
             <div className="flex items-center space-x-4">
               {props.admin == true ? <>
@@ -28,7 +28,7 @@ export default function Sidebar(props) {
           </div>
           {/* Sidebar navigation */}
           
-          <div className="bg-gray-700 py-4 flex-grow w-72">
+          <div className="bg py-4 flex-grow w-72">
             <nav className="space-y-1">
               {props.admin === true ?<><button onClick={()=>{
                  props.showviewappo(true)
