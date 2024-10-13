@@ -5,7 +5,7 @@ import Login from './components/landing page/Login';
 import Register from './components/landing page/Register';
 import Dashboard from './components/home/Dashboard';
 import Admindashboard from './components/home/Admindashboard';
-
+import './index.css'
 
 
 function App() {

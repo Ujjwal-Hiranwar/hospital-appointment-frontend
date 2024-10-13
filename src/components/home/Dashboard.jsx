@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 import Appointmentcard from './Appointmentcard'
 import Appointmentform from './Apointmentform'
 import {BASE_URL} from '../../baseURL'
-
+import Navigation from '../landing page/Navigation'
 
 export default function Dashboard() {
   let [showappointments,setshowappointments] = useState(false)
@@ -47,7 +47,7 @@ export default function Dashboard() {
      
   return (
     <div>    
-        <Dashnavbar />
+      <Navigation />
         <div className='flex flex-row'>
           
         <Sidebar username={userdata.username}
